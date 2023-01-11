@@ -107,18 +107,25 @@ Player Loot(Player &Temp, int Num);
 void Menu()
 {
 	cout << "菜单" << endl;
+	cout << "0.退出程序" << endl;
 	cout << "1.单抽" << endl;
 	cout << "2.十连" << endl;
 	cout << "3.百连" << endl;
 	cout << "4.千连" << endl;
 	cout << "5.万连" << endl;
 	cout << "6.自定义次数" << endl;
+	
 
 	cout << "请输入选择: ";
 	int Menu_S;
 	cin >> Menu_S;
 	switch (Menu_S)
 	{
+	case 0:
+		system("cls");
+		cout << "即将退出程序!祝您生活愉快!再见!" << endl;
+		Sleep(3000);
+		exit(0);
 	case 1:
 		system("cls");
 		One();
@@ -250,10 +257,7 @@ int main()
 	system("cls");
 	cout << "欢迎您!尊敬的 " << WJ.Name << " 阁下!" << endl;
 	cout << "接下来,我将为您跳转至菜单界面,请等待..." << endl;
-	for (int i = 0; i <= 3; i++)
-	{
-		Sleep(1000);
-	}
+	Sleep(1000);
 	cout << "跳转成功!" << endl;
 	system("pause");
 	KK();
